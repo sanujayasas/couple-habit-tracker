@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OUR HABITS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOAST -->
+  <div id="popup"></div>
+
+  <!-- LOG MODAL -->
+  <div class="log-modal-backdrop" id="logModalBackdrop">
+    <div class="log-modal">
+      <h3 id="logModalTitle">Activity Log</h3>
+      <p id="logModalSubtitle">All completed days &amp; notes</p>
+      <div class="log-entries" id="logEntries"></div>
+      <div class="log-add-row">
+        <input type="text" id="logNoteInput" placeholder="Add a note for today...">
+        <button class="btn-save-note" onclick="saveNote()">Save</button>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-close-modal" onclick="closeLogModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-wrap">
+
+    <!-- HEADER -->
+    <header>
+      <div class="hearts-row">
+        <span class="heart-pulse">🤍</span>
+        <span class="heart-pulse">💛</span>
+        <span class="heart-pulse">🤍</span>
+      </div>
+      <h1>OUR HABITS</h1>
+      <p class="subtitle">Stay Consistent · Grow Together</p>
+    </header>
+
+    <!-- STATS -->
+    <div class="stats-bar">
+      <div class="stat-card">
+        <div class="stat-number" id="statTotal">0</div>
+        <div class="stat-label">Habits</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statCompleted">0</div>
+        <div class="stat-label">Done Today</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="statBestStreak">0</div>
+        <div class="stat-label">Best Streak</div>
+      </div>
+    </div>
+
+    <!-- ADD FORM -->
+    <div class="add-section">
+      <h2>Add a new habit ✦</h2>
+      <div class="input-row">
+        <input type="text" id="habitInput" placeholder="e.g. Morning walk together..." onkeydown="if(event.key==='Enter')addHabit()">
+      </div>
+      <div class="emoji-row" id="emojiPicker"></div>
+      <div class="options-row">
+        <select id="categorySelect">
+          <option value="wellness">🌿 Wellness</option>
+          <option value="fitness">💪 Fitness</option>
+          <option value="mindfulness">🧘 Mindfulness</option>
+          <option value="learning">📚 Learning</option>
+          <option value="connection">💑 Connection</option>
+          <option value="finance">💰 Finance</option>
+          <option value="creativity">🎨 Creativity</option>
+          <option value="other">✦ Other</option>
+        </select>
+        <input type="number" id="goalInput" min="1" max="365" placeholder="Goal (days)" value="30">
+        <select id="frequencySelect">
+          <option value="daily">Daily</option>
+          <option value="weekdays">Weekdays</option>
+          <option value="weekends">Weekends</option>
+          <option value="3x">3× Week</option>
+        </select>
+      </div>
+      <div style="margin-top:14px;">
+        <button class="btn-add" onclick="addHabit()">+ Add Habit</button>
+      </div>
+    </div>
+
+    <!-- LIST -->
+    <div class="section-header" id="listHeader" style="display:none;">
+      <h2>Your Habits</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <ul id="habitList"></ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

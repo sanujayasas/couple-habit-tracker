@@ -1,4 +1,4 @@
-# 💙 Couple Habit Tracker
+# 💙 Habit Tracker
 
 A simple web-based habit tracker built for couples to stay consistent and grow together.
 

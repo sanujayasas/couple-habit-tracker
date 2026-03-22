@@ -17,8 +17,8 @@ A simple web-based habit tracker built for couples to stay consistent and grow t
 This project was built as a quick collaboration to practice frontend development and create something actually useful in daily life.
 
 ## 👥 Collaboration
-- Logic & functionality: [Your Name]
-- UI & design: [Her Name]
+- Logic & functionality: Sanuja Yasas
+- UI & design: Nimshi Shehara
 
 ## 📌 Future Improvements
 - User selection (multiple users)
